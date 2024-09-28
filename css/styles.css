@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: 'Montserrat';
+}
+
+
+.question{
+
+position: absolute;
+
+font-style: normal;
+font-weight: 600;
+font-size: 64px;
+line-height: 78px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+}

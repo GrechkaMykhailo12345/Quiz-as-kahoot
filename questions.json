@@ -1,0 +1,277 @@
+[
+    {
+        "type": "default",
+        "question": "Яка марка виробляє модель Mustang?",
+        "correct": "Ford",
+        "answers": [
+            "Toyota",
+            "BMW",
+            "Honda",
+            "Ford"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка країна є батьківщиною компанії Ferrari?",
+        "correct": "Італія",
+        "answers": [
+            "Німеччина",
+            "Франція",
+            "США",
+            "Італія"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Civic?",
+        "correct": "Honda",
+        "answers": [
+            "Mercedes",
+            "Ford",
+            "Nissan",
+            "Honda"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка німецька марка має символ з трьох діамантів?",
+        "correct": "Mitsubishi",
+        "answers": [
+            "BMW",
+            "Audi",
+            "Volkswagen",
+            "Mitsubishi"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Який тип двигуна використовує Tesla?",
+        "correct": "Електричний",
+        "answers": [
+            "Дизельний",
+            "Бензиновий",
+            "Гібридний",
+            "Електричний"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Corolla?",
+        "correct": "Toyota",
+        "answers": [
+            "Ford",
+            "Subaru",
+            "Mazda",
+            "Toyota"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка авто відома своїм кінським логотипом?",
+        "correct": "Ferrari",
+        "answers": [
+            "Audi",
+            "Lamborghini",
+            "Mercedes",
+            "Ferrari"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка японська марка випускає модель Patrol?",
+        "correct": "Nissan",
+        "answers": [
+            "Hyundai",
+            "Mitsubishi",
+            "Toyota",
+            "Nissan"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Camry?",
+        "correct": "Toyota",
+        "answers": [
+            "Honda",
+            "Subaru",
+            "Mazda",
+            "Toyota"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що означає абревіатура SUV?",
+        "correct": "Sports Utility Vehicle",
+        "answers": [
+            "Small Urban Vehicle",
+            "Super Utility Van",
+            "Sports Utility Van",
+            "Sports Utility Vehicle"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Fiesta?",
+        "correct": "Ford",
+        "answers": [
+            "BMW",
+            "Hyundai",
+            "Toyota",
+            "Ford"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що означає 'турбонаддув' у двигунах?",
+        "correct": "Система збільшення потужності двигуна",
+        "answers": [
+            "Система охолодження",
+            "Система змащення",
+            "Система гальмування",
+            "Система збільшення потужності двигуна"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель G-Class?",
+        "correct": "Mercedes-Benz",
+        "answers": [
+            "Toyota",
+            "BMW",
+            "Audi",
+            "Mercedes-Benz"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Leaf?",
+        "correct": "Nissan",
+        "answers": [
+            "Honda",
+            "BMW",
+            "Ford",
+            "Nissan"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що таке 'крутний момент'?",
+        "correct": "Сила, яка обертає колінвал двигуна",
+        "answers": [
+            "Швидкість руху",
+            "Прискорення",
+            "Витрата палива",
+            "Сила, яка обертає колінвал двигуна"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка компанія виробляє модель Octavia?",
+        "correct": "Skoda",
+        "answers": [
+            "Hyundai",
+            "Honda",
+            "Ford",
+            "Skoda"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що означає абревіатура ABS?",
+        "correct": "Anti-lock Braking System",
+        "answers": [
+            "Automatic Braking System",
+            "Air Brake System",
+            "Adjustable Braking System",
+            "Anti-lock Braking System"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель CX-5?",
+        "correct": "Mazda",
+        "answers": [
+            "Hyundai",
+            "Nissan",
+            "Ford",
+            "Mazda"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що таке 'гібридний автомобіль'?",
+        "correct": "Автомобіль з двома двигунами (бензиновий та електричний)",
+        "answers": [
+            "Автомобіль на дизельному двигуні",
+            "Автомобіль з двома двигунами (бензиновий та електричний)",
+            "Автомобіль, що працює тільки на електриці",
+            "Автомобіль, що працює тільки на воді"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Focus?",
+        "correct": "Ford",
+        "answers": [
+            "Audi",
+            "BMW",
+            "Toyota",
+            "Ford"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що означає 'розхід палива'?",
+        "correct": "Кількість палива, яке споживає автомобіль",
+        "answers": [
+            "Об'єм бака",
+            "Кількість масла, яке споживає автомобіль",
+            "Швидкість авто",
+            "Кількість палива, яке споживає автомобіль"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка компанія виробляє модель Accord?",
+        "correct": "Honda",
+        "answers": [
+            "Ford",
+            "Mazda",
+            "Subaru",
+            "Honda"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що означає 'V6' на двигуні?",
+        "correct": "Кількість циліндрів",
+        "answers": [
+            "Тип трансмісійного масла",
+            "Кількість клапанів",
+            "Кількість циліндрів",
+            "Розташування циліндрів та їх кількість"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Яка марка випускає модель Pajero?",
+        "correct": "Mitsubishi",
+        "answers": [
+            "Ford",
+            "Nissan",
+            "Hyundai",
+            "Mitsubishi"
+        ]
+    },
+    {
+        "type": "default",
+        "question": "Що означає позначення '4WD' на автомобілі?",
+        "correct": "Повний привід",
+        "answers": [
+            "Задній привід",
+            "Переднє розташування двигуна",
+            "Заднє розташування двигуна",
+            "Повний привід"
+        ]
+    }
+]
