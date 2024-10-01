@@ -7,16 +7,16 @@ document.getElementById('volumeButton').addEventListener('click', function () {
     if (newVolume > 100) {
         newVolume = 0; // Повертаємось до 0%
     }
-    this.innerHTML = `Гучність: ${newVolume}%`;
+    this.innerHTML = `Sound: ${newVolume}%`;
 });
 
 document.getElementById('difficultyButton').addEventListener('click', function () {
-    let difficultyLevels = ['Легкий', 'Середній', 'Складний'];
+    let difficultyLevels = ['Easy', 'Normal', 'Hard'];
     let currentDifficulty = this.innerHTML.split(': ')[1];
     
     // Змінюємо рівень складності
     let newIndex = (difficultyLevels.indexOf(currentDifficulty) + 1) % difficultyLevels.length;
-    this.innerHTML = `Рівень складності: ${difficultyLevels[newIndex]}`;
+    this.innerHTML = `Dificult: ${difficultyLevels[newIndex]}`;
 });
 
 document.getElementById('timerButton').addEventListener('click', function () {
@@ -28,11 +28,11 @@ document.getElementById('timerButton').addEventListener('click', function () {
     if (newTimer > 60) {
         newTimer = 10; // Повертаємось до 10 секунд
     }
-    this.innerHTML = `Таймер на питання: ${newTimer} секунд`;
+    this.innerHTML = `Timer: ${newTimer} seconds`;
 });
 
 document.getElementById('exitButtonTopLeft').addEventListener('click', function () {
-    alert("Вихід з екрану налаштувань (зліва зверху)");
+    alert("Вихід з екрану налаштувань");
 });
 
 document.getElementById('nextScreenButton').addEventListener('click', function () {

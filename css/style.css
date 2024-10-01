@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
 body {
   background-image: url('../img/fon.jpg'); /* Замінити 'your-image.jpg' на назву твого зображення */
 }
 
 
 .settings {
-  font-family: "Pacifico", cursive;
-  color: rgb(0, 140, 255);
+  color: #8F48DB;
   text-align: center;
   font-size: 40px;
+
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+
+  
+
 }
 
 /* Кнопка вийти зліва зверху */
@@ -17,38 +31,53 @@ body {
 }
 
 .exit-button {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 120px;
+  margin: 15px auto;
   position: absolute;
-  padding: 10px;
-  font-size: 16px;
-  background-color: rgb(30, 13, 46);
-  color: rgb(0, 140, 255);
-  border: none;
-  cursor: pointer;
+  color: #8F48DB;
+
+  width: 154px;
+  height: 146px;
+  
+  background: #BAE0A0;
+  border-radius: 500px; 
 }
 
 #nextScreenButton {
-  text-align: center;
-  width: auto;
-  font-size: 30px;
-  background-color: rgb(30, 13, 46);
-  color: rgb(0, 140, 255);
-  border-radius: 100px;
+  font-family: 'Bungee Inline';
+  font-style: normal;
+
+  font-size: 100px;
+  line-height: 90px;
+  margin: 15px auto;
+
+  color: #8F48DB;
   float: right;
-  
+  background: #BAE0A0;
+
+  width: 154px;
+  height: 146px;
+
+  background: #BAE0A0;
 }
 
 button {
-  font-family: "Pacifico", cursive;
-  background-color: rgb(30, 13, 46);
-  color: rgb(0, 140, 255);
-  text-align: center;
-  display: block;
-  width: auto;
-  margin: 15px auto;
-  padding: 10px;
-  font-size: 40px;
-  border: none;
-  border-radius: 20px;
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 120px;
+  flex-direction: column;
+  margin: 15px 500px;
+
+  color: #8F48DB;
+
+  background: #BAE0A0;
+  border-radius: 500px;
 }
 
 button:hover {
