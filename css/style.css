@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
 body {
-  background-image: url('../img/fon.jpg'); /* Замінити 'your-image.jpg' на назву твого зображення */
+  background-image: url('../img/fon.jpg'); 
 }
 
 
@@ -24,7 +24,6 @@ body {
 
 }
 
-/* Кнопка вийти зліва зверху */
 #exitButtonTopLeft {
   top: 10px;
   left: 10px;
@@ -61,8 +60,6 @@ body {
 
   width: 154px;
   height: 146px;
-
-  background: #BAE0A0;
 }
 
 button {
@@ -83,3 +80,8 @@ button {
 button:hover {
   background-color: rgb(1, 110, 110);
 }
+
+#nextScreenButton:hover {
+  background-color: rgb(1, 110, 110);
+}
+
