@@ -1,11 +1,70 @@
-const main_screen = document.querySelector(".main-screen");
-const start_screen = document.querySelector(".start-screen");
-const stats_screen = document.querySelector(".stats-screen");
-const question = document.querySelector(".question");
-const answers = document.querySelector(".answers");
-const answer_buttons = document.querySelectorAll(".answer-button");
-const start_button = document.querySelector('.start-button');
-const stats_button = document.querySelector('.stats-button');
-const back_button = document.querySelector('.back-button');
-const secondsElement = document.getElementById('seconds');
-const skip_btn = document.querySelector('.skip-btn');
+const answersContainer = document.querySelector('.answers'); // Знаходимо контейнер з кнопками
+let questionsList = []; // Список питань
+let currentQuestionIndex = 0; // Індекс поточного питання
+
+async function getQuestions() {
+    let response = await fetch("questions.json");
+    let questions = await response.json();
+    return questions;
+}
+
+// Функція для перемішування масиву
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+    return array;
+}
+
+// Функція для відображення поточного питання та відповідей
+function displayQuestion() {
+    const questionElement = document.querySelector('.question');
+    questionElement.textContent = questionsList[currentQuestionIndex].question;
+
+    // Очищення контейнера з кнопками
+    answersContainer.innerHTML = '';
+
+    // Перемішування відповідей
+    const shuffledAnswers = shuffle(questionsList[currentQuestionIndex].answers.slice());
+
+    // Створення кнопок для відповідей
+    shuffledAnswers.forEach(answer => {
+        const button = document.createElement("div");
+        button.classList.add("answer-button");
+        button.textContent = answer;
+
+        // Додаємо обробник події для кнопки
+        button.addEventListener('click', function () {
+            // Перевіряємо відповідь
+            handleAnswerClick(answer);
+        });
+
+        answersContainer.appendChild(button);
+    });
+}
+
+// Обробник натискання на кнопку відповіді
+function handleAnswerClick(selectedAnswer) {
+    const correctAnswer = questionsList[currentQuestionIndex].correct; // Правильна відповідь
+
+    if (selectedAnswer === correctAnswer) {
+        console.log("Вірно!");
+    } else {
+        console.log("Неправильно! Правильна відповідь: " + correctAnswer);
+    }
+
+    // Переход до наступного питання
+    currentQuestionIndex = (currentQuestionIndex + 1) % questionsList.length; // Переходимо до наступного питання
+    displayQuestion(); // Відображаємо наступне питання
+}
+
+// Завантажуємо питання при завантаженні сторінки
+getQuestions().then(function (questions) {
+    questionsList = questions;
+    displayQuestion(); // Відображаємо перше питання
+});
