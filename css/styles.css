@@ -29,6 +29,7 @@ body {
     color:#3B0065;
     border-radius: 10px;
     padding: 17.5px 30px;
+    text-align: center;
 }
 
 .answers {
@@ -39,6 +40,7 @@ body {
 }
 
 .answer-button{
+    display: flex;
     cursor: pointer; /* Зміна курсору при наведенні */
     border:3px solid #BAE0A0;
     background-color: #BAE0A0;
@@ -49,6 +51,8 @@ body {
     margin-top:20px;
     margin-bottom:20px;
     font-size: 1.5em;
+    text-align: center;
+    align-items: center;
 }
 
 .answer-button:hover,.skip-btn:hover{
@@ -74,4 +78,7 @@ body {
     cursor: pointer; /* Зміна курсору при наведенні */
     border-radius: 5px; /* Закруглені кути */
     font-size: 1.7em; /* Розмір тексту */
+    text-align: center;
+    display: flex;
+    align-items: center;
 }

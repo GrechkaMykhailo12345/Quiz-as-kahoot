@@ -1,6 +1,8 @@
 const answersContainer = document.querySelector('.answers'); // Знаходимо контейнер з кнопками
+const skip_btn = document.querySelector('.skip-btn');
 let questionsList = []; // Список питань
 let currentQuestionIndex = 0; // Індекс поточного питання
+let questionTimer = 30
 
 async function getQuestions() {
     let response = await fetch("questions.json");
@@ -65,6 +67,11 @@ function handleAnswerClick(selectedAnswer) {
 
 // Завантажуємо питання при завантаженні сторінки
 getQuestions().then(function (questions) {
-    questionsList = questions;
+    questionsList = shuffle(questions); // Перемішуємо питання
     displayQuestion(); // Відображаємо перше питання
 });
+
+skip_btn.addEventListener('click', function(){
+    currentQuestionIndex = (currentQuestionIndex + 1) % questionsList.length; // Переходимо до наступного питання
+    displayQuestion(); // Відображаємо наступне питання
+})
