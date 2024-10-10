@@ -1,9 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
 body {
-  background-image: url('../img/fon.jpg'); 
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    background-image: url('../img/fon.jpg'); 
 }
 
+.logo {
+    /* QUIZ FOR CARS */
+
+   
+    width: 805px;
+    height: 120px;
+
+    font-family: 'Bungee Inline';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 120px;
+    /* identical to box height */
+
+    color: #A136EC;
+
+
+}
+
+.start-button {
+    /* Group 1 */
+
+  
+    width: 413px;
+    height: 130px;
+
+
+    background: #BAE0A0;
+    border-radius: 500px;
+
+    font-family: 'Bungee Inline';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 120px;
+    text-align: center;
+    color: #8F48DB;
+    cursor: pointer;
+
+}
+
+.button-settings {
+    /* Ellipse 1 */
+  
+    width: 154px;
+    height: 146px;
+   
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+
+    background: #BAE0A0;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+}
+
+.start-screen {
+    /* image 1 */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 15vh;
+    background-image: url(../img/start-screen.jpg);
+
+}
+
+.settings-icon {
+   
+    width: 154px;
+    height: 146px;
+    background-image: url(../img/Settings-icon.png);
+    background-size:cover ;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+.settings-screen{
+  display: none;
+  
+}
 
 .settings {
   color: #8F48DB;
@@ -18,9 +113,6 @@ body {
 
   display: flex;
   flex-direction: column;
-
-
-  
 
 }
 

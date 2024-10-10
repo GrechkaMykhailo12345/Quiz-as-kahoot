@@ -1,7 +1,18 @@
+const start_button = document.querySelector(".start-button")
+const button_settings = document.querySelector(".button-settings")
+const start_screen = document.querySelector(".start-screen")
+const settings_screen = document.querySelector(".settings-screen")
+
+button_settings.addEventListener("click", function() {
+    start_screen.style.display = 'none'
+    settings_screen.style.display = "block"
+}) 
+
+
 document.getElementById('volumeButton').addEventListener('click', function () {
     let currentVolume = this.innerHTML.match(/\d+/);
     currentVolume = parseInt(currentVolume);
-    
+
     // Змінюємо гучність (крок 10%)
     let newVolume = currentVolume + 10;
     if (newVolume > 100) {
@@ -13,7 +24,7 @@ document.getElementById('volumeButton').addEventListener('click', function () {
 document.getElementById('difficultyButton').addEventListener('click', function () {
     let difficultyLevels = ['Easy', 'Normal', 'Hard'];
     let currentDifficulty = this.innerHTML.split(': ')[1];
-    
+
     // Змінюємо рівень складності
     let newIndex = (difficultyLevels.indexOf(currentDifficulty) + 1) % difficultyLevels.length;
     this.innerHTML = `Dificult: ${difficultyLevels[newIndex]}`;
@@ -22,7 +33,7 @@ document.getElementById('difficultyButton').addEventListener('click', function (
 document.getElementById('timerButton').addEventListener('click', function () {
     let currentTimer = this.innerHTML.match(/\d+/);
     currentTimer = parseInt(currentTimer);
-    
+
     // Змінюємо таймер (крок 10 секунд)
     let newTimer = currentTimer + 10;
     if (newTimer > 60) {
@@ -32,7 +43,8 @@ document.getElementById('timerButton').addEventListener('click', function () {
 });
 
 document.getElementById('exitButtonTopLeft').addEventListener('click', function () {
-    alert("Вихід з екрану налаштувань");
+    start_screen.style.display = 'flex'
+    settings_screen.style.display = "none"
 });
 
 document.getElementById('nextScreenButton').addEventListener('click', function () {
