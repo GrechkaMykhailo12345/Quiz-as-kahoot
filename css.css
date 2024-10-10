@@ -1,0 +1,48 @@
+body {
+    background-image: url('https://i.pinimg.com/736x/6e/d3/a6/6ed3a6620d06f13fe536a9bc9d611870.jpg');
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+    margin: 70px auto;
+}
+
+.start-btn {
+    display: block;
+    margin: 60px auto;
+    color: purple;
+    font-size: 24px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 2px solid purple;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.circle-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: purple;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.clicked {
+    background-color: rgb(139, 145, 138);
+}
