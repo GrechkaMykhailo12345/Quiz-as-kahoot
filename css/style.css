@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+body {
+  background-image: url('../img/fon.jpg'); 
+}
+
+
+.settings {
+  color: #8F48DB;
+  text-align: center;
+  font-size: 40px;
+
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+
+  
+
+}
+
+#exitButtonTopLeft {
+  top: 10px;
+  left: 10px;
+}
+
+.exit-button {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 120px;
+  margin: 15px auto;
+  position: absolute;
+  color: #8F48DB;
+
+  width: 154px;
+  height: 146px;
+  
+  background: #BAE0A0;
+  border-radius: 500px; 
+}
+
+#nextScreenButton {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+
+  font-size: 100px;
+  line-height: 90px;
+  margin: 15px auto;
+
+  color: #8F48DB;
+  float: right;
+  background: #BAE0A0;
+
+  width: 154px;
+  height: 146px;
+}
+
+button {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 120px;
+  flex-direction: column;
+  margin: 15px 500px;
+
+  color: #8F48DB;
+
+  background: #BAE0A0;
+  border-radius: 500px;
+}
+
+button:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+#nextScreenButton:hover {
+  background-color: rgb(1, 110, 110);
+}
+
