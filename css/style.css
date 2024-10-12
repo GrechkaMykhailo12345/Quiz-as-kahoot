@@ -136,6 +136,7 @@ body {
   
   background: #BAE0A0;
   border-radius: 500px; 
+  cursor: pointer;
 }
 
 #nextScreenButton {
@@ -152,6 +153,7 @@ body {
 
   width: 154px;
   height: 146px;
+  cursor: pointer;
 }
 
 button {
