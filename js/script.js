@@ -56,6 +56,12 @@ document.getElementById('exitButtonTopLeft').addEventListener('click', function 
 
 document.getElementById('nextScreenButton').addEventListener('click', function () {
     develop_screen.style.display = 'flex'
-    settings_screen.style.display = "none"
+    settings_screen.style.display = "none"   
 });
+
+document.getElementById('exitButtonTopLeft2').addEventListener('click', function () {
+    settings_screen.style.display = 'flex'
+    develop_screen.style.display = "none"
+});
+
 
