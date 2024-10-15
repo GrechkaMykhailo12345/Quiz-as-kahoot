@@ -17,8 +17,8 @@ h1 {
     font-size: 24px;
     padding: 10px 30px;
     border-radius: 20px;
-    border: 2px solid purple;
-    background-color: transparent;
+    border: 2px solid while;
+    background-color: while;
     cursor: pointer;
 }
 
@@ -28,7 +28,7 @@ h1 {
     right: 20px;
     width: 70px;
     height: 70px;
-    background-color: purple;
+    background-color: while;
     border: none;
     border-radius: 50%;
     cursor: pointer;
