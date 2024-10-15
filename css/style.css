@@ -8,7 +8,9 @@ body {
     font-weight: 600;
     font-style: normal;
     margin: 0;
-    background-image: url('../img/fon.jpg'); 
+    background-image: url('../img/fon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -237,3 +239,76 @@ button:hover {
   transition: box-shadow 0.7s linear, transform 0.7s linear;
 }
 
+
+.game-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center; /* Центрування по горизонталі */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.question {
+  font-size: 3.5em;
+  padding: 7.5px;
+  margin-bottom: 20px; /* Відступ між питанням і відповідями */
+  border:3px solid #BAE0A0;
+  background-color: #BAE0A0;
+  color:#3B0065;
+  border-radius: 10px;
+  padding: 17.5px 30px;
+  text-align: center;
+}
+
+.answers {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Відстань між кнопками, якщо це кнопки */
+  font-size:1.5em;
+}
+
+.answer-button{
+  display: flex;
+  cursor: pointer; /* Зміна курсору при наведенні */
+  border:3px solid #BAE0A0;
+  background-color: #BAE0A0;
+  color:#3B0065;
+  border-radius: 10px;
+  padding:10px;
+  padding: 12.5px 25px;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+}
+
+.answer-button:hover,.skip-btn:hover{
+  scale:1.05;
+}
+
+.timer {
+  position: absolute; /* Абсолютне позиціонування */
+  top: 12.5px; /* Відступ від верхнього краю */
+  right: 35px; /* Відступ від правого краю */
+  font-size: 3.5em; /* Розмір шрифту */
+  color: white; /* Колір шрифту */
+  color:#3B0065;
+  
+}
+
+.skip-btn {
+  margin-top: 20px; /* Відступ такий самий, як між питанням і відповідями */
+  padding: 22.5px 32.5px; /* Стилі для кнопки Skip */
+  background-color: #BAE0A0; /* Колір фону кнопки */
+  color:#3B0065; /* Колір тексту */
+  border: none; /* Прибрати рамку */
+  cursor: pointer; /* Зміна курсору при наведенні */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 1.7em; /* Розмір тексту */
+  text-align: center;
+  display: flex;
+  align-items: center;
+}

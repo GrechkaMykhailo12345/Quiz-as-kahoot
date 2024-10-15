@@ -1,10 +1,12 @@
 
 const start_button = document.querySelector(".start-button")
+const game_screen = document.querySelector(".game-screen")
 const button_settings = document.querySelector(".button-settings")
 const start_screen = document.querySelector(".start-screen")
 const settings_screen = document.querySelector(".settings-screen")
 const develop_screen = document.querySelector(".develop-screen")
 
+let currentDifficulty = "Normal"
 const bgMusic = new Audio('audio/bg_musik.mp3')
 bgMusic.loop = true
 bgMusic.volume = 0.5
@@ -25,11 +27,12 @@ document.getElementById('volumeButton').addEventListener('click', function () {
 
 document.getElementById('difficultyButton').addEventListener('click', function () {
     let difficultyLevels = ['Easy', 'Normal', 'Hard'];
-    let currentDifficulty = this.innerHTML.split(': ')[1];
+    currentDifficulty = this.innerHTML.split(': ')[1];
 
     // Змінюємо рівень складності
     let newIndex = (difficultyLevels.indexOf(currentDifficulty) + 1) % difficultyLevels.length;
     this.innerHTML = `Dificult: ${difficultyLevels[newIndex]}`;
+    currentDifficulty = difficultyLevels[newIndex];
 });
 
 document.getElementById('timerButton').addEventListener('click', function () {
@@ -45,18 +48,20 @@ document.getElementById('timerButton').addEventListener('click', function () {
 });
 
 button_settings.addEventListener("click", function() {
+    document.body.style.backgroundImage = "url(../img/bg1.png)"
     start_screen.style.display = 'none'
     settings_screen.style.display = "block"
 }) 
 
 document.getElementById('exitButtonTopLeft').addEventListener('click', function () {
+    document.body.style.backgroundImage = "url(../img/bg1.png)"
     start_screen.style.display = 'flex'
     settings_screen.style.display = "none"
 });
 
 document.getElementById('nextScreenButton').addEventListener('click', function () {
     develop_screen.style.display = 'flex'
-    settings_screen.style.display = "none"   
+    settings_screen.style.display = "none"
 });
 
 document.getElementById('exitButtonTopLeft2').addEventListener('click', function () {
@@ -64,6 +69,13 @@ document.getElementById('exitButtonTopLeft2').addEventListener('click', function
     develop_screen.style.display = "none"
 });
 
+start_button.addEventListener('click', function () {
+    displayQuestion(); // Відображаємо перше питання
+    game_screen.style.display = 'flex'
+    start_screen.style.display = "none"
+    document.body.style.backgroundImage = "url(../img/bg3.png)"
+
+});
 
 
 // Код квізу
@@ -97,7 +109,14 @@ function shuffle(array) {
 
 // Функція для запуску таймера
 function startTimer() {
-    let timeLeft = 5; // 5 секунд на відповідь
+    let timeLeft;
+    if (currentDifficulty=='Easy'){
+        timeLeft = 25; // 5 секунд на відповідь
+    } else if (currentDifficulty=='Normal'){
+        timeLeft = 10; // 5 секунд на відповідь
+    }  else {
+        timeLeft = 5; // 5 секунд на відповідь
+    }
     timerElement.textContent = timeLeft;
 
     // Очищуємо попередній інтервал, якщо він є
