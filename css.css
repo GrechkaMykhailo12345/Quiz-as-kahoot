@@ -2,6 +2,12 @@ body {
     background-image: url('https://i.pinimg.com/736x/6e/d3/a6/6ed3a6620d06f13fe536a9bc9d611870.jpg');
     margin: 0;
     font-family: Arial, sans-serif;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
