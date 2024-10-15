@@ -1,4 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
 
 body {
     font-family: "Handjet", sans-serif;
@@ -175,6 +178,52 @@ button:hover {
   background-color: rgb(1, 110, 110);
 }
 
+
+#nextScreenButton2:hover{
+  background-color: rgb(1, 110, 110);
+}
+
+.develop-screen{
+  display: none;
+}
+
+.develop{
+  color: #8F48DB;
+  text-align: center;
+
+  font-family: "Handjet", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 120px;
+  margin: auto;
+
+  width: 85%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #BAE0A0;
+  border-radius: 500px;
+}
+
+/*#nextScreenButton2 {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+
+  font-size: 100px;
+  line-height: 90px;
+  margin: 15px auto;
+
+  color: #8F48DB;
+  float: right;
+  background: #BAE0A0;
+
+  width: 154px;
+  height: 146px;
+}*\
+=======
 .button-settings:hover {
   background-color: rgb(1, 110, 110);
 }
@@ -187,3 +236,4 @@ button:hover {
   transform: scale(1.05) rotate(360deg);
   transition: box-shadow 0.7s linear, transform 0.7s linear;
 }
+
