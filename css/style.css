@@ -137,6 +137,7 @@ body {
   
   background: #BAE0A0;
   border-radius: 500px; 
+  cursor: pointer;
 }
 
 #nextScreenButton {
@@ -153,6 +154,7 @@ body {
 
   width: 154px;
   height: 146px;
+  cursor: pointer;
 }
 
 button {
@@ -177,6 +179,7 @@ button:hover {
 #nextScreenButton:hover {
   background-color: rgb(1, 110, 110);
 }
+
 
 #nextScreenButton2:hover{
   background-color: rgb(1, 110, 110);
@@ -222,3 +225,17 @@ button:hover {
   width: 154px;
   height: 146px;
 }*\
+=======
+.button-settings:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+.start-button:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+.settings-icon:hover {
+  transform: scale(1.05) rotate(360deg);
+  transition: box-shadow 0.7s linear, transform 0.7s linear;
+}
+
