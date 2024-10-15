@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+
+body {
+    font-family: "Handjet", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+    background-image: url('../img/fon.jpg'); 
+}
+
+.logo {
+    /* QUIZ FOR CARS */
+
+    font-family: 'Handjet';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 120px;
+    /* identical to box height */
+
+    color: #A136EC;
+
+
+}
+
+.start-button {
+    /* Group 1 */
+
+  
+    width: 413px;
+    height: 130px;
+
+
+    background: #BAE0A0;
+    border-radius: 500px;
+
+    font-family: 'Handjet';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 120px;
+    text-align: center;
+    color: #8F48DB;
+    cursor: pointer;
+
+}
+
+.button-settings {
+    /* Ellipse 1 */
+  
+    width: 154px;
+    height: 146px;
+   
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+
+    background: #BAE0A0;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+}
+
+.start-screen {
+    /* image 1 */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 15vh;
+    background-image: url(../img/start-screen.jpg);
+
+}
+
+.settings-icon {
+   
+    width: 154px;
+    height: 146px;
+    background-image: url(../img/Settings-icon.png);
+    background-size:cover ;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+.settings-screen{
+  display: none;
+  
+}
+
+.settings {
+  color: #8F48DB;
+  text-align: center;
+  font-size: 40px;
+
+  font-family: 'Handjet';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+#exitButtonTopLeft {
+  top: 10px;
+  left: 10px;
+}
+
+.exit-button {
+  font-family: 'Handjet';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 120px;
+  margin: 15px auto;
+  position: absolute;
+  color: #8F48DB;
+
+  width: 154px;
+  height: 146px;
+  
+  background: #BAE0A0;
+  border-radius: 500px; 
+  cursor: pointer;
+}
+
+#nextScreenButton {
+  font-family: 'Handjet';
+  font-style: normal;
+
+  font-size: 100px;
+  line-height: 90px;
+  margin: 15px auto;
+
+  color: #8F48DB;
+  float: right;
+  background: #BAE0A0;
+
+  width: 154px;
+  height: 146px;
+  cursor: pointer;
+}
+
+button {
+  font-family: 'Handjet';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 120px;
+  flex-direction: column;
+  margin: 15px 500px;
+
+  color: #8F48DB;
+
+  background: #BAE0A0;
+  border-radius: 500px;
+}
+
+button:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+#nextScreenButton:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+
+#nextScreenButton2:hover{
+  background-color: rgb(1, 110, 110);
+}
+
+.develop-screen{
+  display: none;
+}
+
+.develop{
+  color: #8F48DB;
+  text-align: center;
+
+  font-family: "Handjet", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 120px;
+  margin: auto;
+
+  width: 85%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #BAE0A0;
+  border-radius: 500px;
+}
+
+/*#nextScreenButton2 {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+
+  font-size: 100px;
+  line-height: 90px;
+  margin: 15px auto;
+
+  color: #8F48DB;
+  float: right;
+  background: #BAE0A0;
+
+  width: 154px;
+  height: 146px;
+}*\
+=======
+.button-settings:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+.start-button:hover {
+  background-color: rgb(1, 110, 110);
+}
+
+.settings-icon:hover {
+  transform: scale(1.05) rotate(360deg);
+  transition: box-shadow 0.7s linear, transform 0.7s linear;
+}
+
