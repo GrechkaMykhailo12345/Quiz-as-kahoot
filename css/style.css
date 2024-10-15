@@ -1,9 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
 
 body {
-    font-family: "Bungee Inline", sans-serif;
-    font-weight: 400;
+    font-family: "Handjet", sans-serif;
+    font-weight: 600;
     font-style: normal;
     margin: 0;
     background-image: url('../img/fon.jpg'); 
@@ -12,13 +14,9 @@ body {
 .logo {
     /* QUIZ FOR CARS */
 
-   
-    width: 805px;
-    height: 120px;
-
-    font-family: 'Bungee Inline';
+    font-family: 'Handjet';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 100px;
     line-height: 120px;
     /* identical to box height */
@@ -39,9 +37,9 @@ body {
     background: #BAE0A0;
     border-radius: 500px;
 
-    font-family: 'Bungee Inline';
+    font-family: 'Handjet';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 100px;
     line-height: 120px;
     text-align: center;
@@ -106,9 +104,9 @@ body {
   text-align: center;
   font-size: 40px;
 
-  font-family: 'Bungee Inline';
+  font-family: 'Handjet';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 60px;
   line-height: 120px;
 
@@ -123,9 +121,9 @@ body {
 }
 
 .exit-button {
-  font-family: 'Bungee Inline';
+  font-family: 'Handjet';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 100px;
   line-height: 120px;
   margin: 15px auto;
@@ -141,7 +139,7 @@ body {
 }
 
 #nextScreenButton {
-  font-family: 'Bungee Inline';
+  font-family: 'Handjet';
   font-style: normal;
 
   font-size: 100px;
@@ -158,9 +156,9 @@ body {
 }
 
 button {
-  font-family: 'Bungee Inline';
+  font-family: 'Handjet';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 80px;
   line-height: 120px;
   flex-direction: column;
