@@ -1,9 +1,11 @@
 const answersContainer = document.querySelector('.answers'); // Знаходимо контейнер з кнопками
 const skip_btn = document.querySelector('.skip-btn');
+const timerElement = document.getElementById('seconds'); // Елемент для відображення таймера
 let questionsList = []; // Список питань
 let currentQuestionIndex = 0; // Індекс поточного питання
-let questionTimer = 30
+let timerInterval; // Інтервал для таймера
 
+// Функція для отримання питань
 async function getQuestions() {
     let response = await fetch("questions.json");
     let questions = await response.json();
@@ -21,6 +23,28 @@ function shuffle(array) {
             array[randomIndex], array[currentIndex]];
     }
     return array;
+}
+
+// Функція для запуску таймера
+function startTimer() {
+    let timeLeft = 5; // 5 секунд на відповідь
+    timerElement.textContent = timeLeft;
+
+    // Очищуємо попередній інтервал, якщо він є
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+
+    // Створюємо новий інтервал
+    timerInterval = setInterval(function () {
+        timeLeft--;
+        timerElement.textContent = timeLeft;
+
+        if (timeLeft <= -1) {
+            clearInterval(timerInterval); // Зупиняємо таймер
+            skipQuestion(); // Переходимо до наступного питання
+        }
+    }, 1000); // Кожна секунда
 }
 
 // Функція для відображення поточного питання та відповідей
@@ -41,26 +65,51 @@ function displayQuestion() {
         button.textContent = answer;
 
         // Додаємо обробник події для кнопки
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function (e) {
             // Перевіряємо відповідь
-            handleAnswerClick(answer);
+            handleAnswerClick(answer,e.target);
         });
 
         answersContainer.appendChild(button);
     });
+
+    // Запускаємо таймер на 5 секунд
+    startTimer();
 }
 
 // Обробник натискання на кнопку відповіді
-function handleAnswerClick(selectedAnswer) {
+function handleAnswerClick(selectedAnswer, selected_button) {
     const correctAnswer = questionsList[currentQuestionIndex].correct; // Правильна відповідь
+
+    // Зупиняємо таймер, якщо користувач відповів
+    clearInterval(timerInterval);
 
     if (selectedAnswer === correctAnswer) {
         console.log("Вірно!");
+        selected_button.style.borderColor = "rgba(0,255,0)"
+        
     } else {
         console.log("Неправильно! Правильна відповідь: " + correctAnswer);
+        selected_button.style.borderColor = "rgba(255,0,0)"
     }
+    anime({
+        targets: selected_button,
+        borderColor: "#BAE0A0",
+        duration: 500,
+        delay: 100,
+        easing: "linear"
+    });
 
     // Переход до наступного питання
+    currentQuestionIndex = (currentQuestionIndex + 1) % questionsList.length; // Переходимо до наступного питання
+    setTimeout(() => {
+        displayQuestion();
+    }, 2000);
+     // Відображаємо наступне питання
+}
+
+// Функція для пропуску питання, коли користувач не відповів вчасно
+function skipQuestion() {
     currentQuestionIndex = (currentQuestionIndex + 1) % questionsList.length; // Переходимо до наступного питання
     displayQuestion(); // Відображаємо наступне питання
 }
@@ -71,7 +120,8 @@ getQuestions().then(function (questions) {
     displayQuestion(); // Відображаємо перше питання
 });
 
+// Обробник для кнопки "Пропустити"
 skip_btn.addEventListener('click', function(){
-    currentQuestionIndex = (currentQuestionIndex + 1) % questionsList.length; // Переходимо до наступного питання
-    displayQuestion(); // Відображаємо наступне питання
-})
+    clearInterval(timerInterval); // Зупиняємо таймер
+    skipQuestion(); // Пропускаємо питання
+});
