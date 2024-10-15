@@ -1,20 +1,7 @@
-
-document.addEventListener('DOMContentLoaded', function() {
-    
-    
-    const startBtn = document.getElementById('start-btn');
-    startBtn.addEventListener('click', function() {
-        alert('Починаємо тест!');
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const startBtn = document.querySelector('.start-btn');
+    const circleBtn = document.querySelector('.circle-btn');
 
     
-    const circleBtn = document.getElementById('circle-btn');
-    circleBtn.addEventListener('click', function() {
-        circleBtn.classList.toggle('clicked');
-    });
-});
-
-
-
 
 
