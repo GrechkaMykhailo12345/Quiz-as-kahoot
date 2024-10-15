@@ -2,12 +2,12 @@ const start_button = document.querySelector(".start-button")
 const button_settings = document.querySelector(".button-settings")
 const start_screen = document.querySelector(".start-screen")
 const settings_screen = document.querySelector(".settings-screen")
+const develop_screen = document.querySelector(".develop-screen")
 
-button_settings.addEventListener("click", function() {
-    start_screen.style.display = 'none'
-    settings_screen.style.display = "block"
-}) 
-
+const bgMusic = new Audio('audio/bg_musik.mp3')
+bgMusic.loop = true
+bgMusic.volume = 0.5
+bgMusic.play()
 
 document.getElementById('volumeButton').addEventListener('click', function () {
     let currentVolume = this.innerHTML.match(/\d+/);
@@ -18,6 +18,7 @@ document.getElementById('volumeButton').addEventListener('click', function () {
     if (newVolume > 100) {
         newVolume = 0; // Повертаємось до 0%
     }
+    bgMusic.volume = newVolume / 100
     this.innerHTML = `Sound: ${newVolume}%`;
 });
 
@@ -42,12 +43,26 @@ document.getElementById('timerButton').addEventListener('click', function () {
     this.innerHTML = `Timer: ${newTimer} seconds`;
 });
 
+button_settings.addEventListener("click", function() {
+    start_screen.style.display = 'none'
+    settings_screen.style.display = "block"
+}) 
+
 document.getElementById('exitButtonTopLeft').addEventListener('click', function () {
     start_screen.style.display = 'flex'
     settings_screen.style.display = "none"
 });
 
 document.getElementById('nextScreenButton').addEventListener('click', function () {
-    alert("Перехід на наступний екран");
+    develop_screen.style.display = 'flex'
+    settings_screen.style.display = "none"   
 });
+
+document.getElementById('exitButtonTopLeft2').addEventListener('click', function () {
+    settings_screen.style.display = 'block'
+    develop_screen.style.display = "none"
+});
+
+
+
 
