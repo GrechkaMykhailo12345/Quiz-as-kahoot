@@ -9,12 +9,6 @@ bgMusic.loop = true
 bgMusic.volume = 0.5
 bgMusic.play()
 
-button_settings.addEventListener("click", function() {
-    start_screen.style.display = 'none'
-    settings_screen.style.display = "block"
-}) 
-
-
 document.getElementById('volumeButton').addEventListener('click', function () {
     let currentVolume = this.innerHTML.match(/\d+/);
     currentVolume = parseInt(currentVolume);
@@ -49,6 +43,11 @@ document.getElementById('timerButton').addEventListener('click', function () {
     this.innerHTML = `Timer: ${newTimer} seconds`;
 });
 
+button_settings.addEventListener("click", function() {
+    start_screen.style.display = 'none'
+    settings_screen.style.display = "block"
+}) 
+
 document.getElementById('exitButtonTopLeft').addEventListener('click', function () {
     start_screen.style.display = 'flex'
     settings_screen.style.display = "none"
@@ -60,8 +59,10 @@ document.getElementById('nextScreenButton').addEventListener('click', function (
 });
 
 document.getElementById('exitButtonTopLeft2').addEventListener('click', function () {
-    settings_screen.style.display = 'flex'
+    settings_screen.style.display = 'block'
     develop_screen.style.display = "none"
 });
+
+
 
 

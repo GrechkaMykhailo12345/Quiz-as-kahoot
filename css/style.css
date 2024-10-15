@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
 
 body {
     font-family: "Bungee Inline", sans-serif;
@@ -188,11 +189,10 @@ button:hover {
 .develop{
   color: #8F48DB;
   text-align: center;
-  font-size: 80px;
 
-  font-family: 'Bungee Inline';
+  font-family: "Handjet", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 80px;
   line-height: 120px;
   margin: auto;
