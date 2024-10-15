@@ -208,7 +208,7 @@ button:hover {
   border-radius: 500px;
 }
 
-/*#nextScreenButton2 {
+#nextScreenButton2 {
   font-family: 'Bungee Inline';
   font-style: normal;
 
@@ -222,8 +222,8 @@ button:hover {
 
   width: 154px;
   height: 146px;
-}*\
-=======
+}
+
 .button-settings:hover {
   background-color: rgb(1, 110, 110);
 }
