@@ -5,12 +5,20 @@ const button_settings = document.querySelector(".button-settings")
 const start_screen = document.querySelector(".start-screen")
 const settings_screen = document.querySelector(".settings-screen")
 const develop_screen = document.querySelector(".develop-screen")
-
+let totalTimer = 5*60
 let currentDifficulty = "Normal"
 const bgMusic = new Audio('audio/bg_musik.mp3')
 bgMusic.loop = true
 bgMusic.volume = 0.5
-bgMusic.play()
+let isMusicPlayed = false;
+
+document.addEventListener('mousemove', function () {
+    if (!isMusicPlayed) {
+        bgMusic.play()
+        isMusicPlayed = true; // Щоб музика грала лише один раз
+    }
+});
+
 
 document.getElementById('volumeButton').addEventListener('click', function () {
     let currentVolume = this.innerHTML.match(/\d+/);
@@ -39,12 +47,13 @@ document.getElementById('timerButton').addEventListener('click', function () {
     let currentTimer = this.innerHTML.match(/\d+/);
     currentTimer = parseInt(currentTimer);
 
-    // Змінюємо таймер (крок 10 секунд)
-    let newTimer = currentTimer + 10;
-    if (newTimer > 60) {
-        newTimer = 10; // Повертаємось до 10 секунд
+    // Змінюємо таймер (крок 5 хвилина)
+    let newTimer = currentTimer + 5;
+    if (newTimer > 30) {
+        newTimer = 5; // Повертаємось до 5 хвилин
     }
-    this.innerHTML = `Timer: ${newTimer} seconds`;
+    this.innerHTML = `Timer: ${newTimer} minutes`;
+    totalTimer =newTimer;
 });
 
 button_settings.addEventListener("click", function() {
@@ -69,12 +78,15 @@ document.getElementById('exitButtonTopLeft2').addEventListener('click', function
     develop_screen.style.display = "none"
 });
 
+let points  = 0;
 start_button.addEventListener('click', function () {
+    points = 0;
+    currentQuestionIndex = 0;
     displayQuestion(); // Відображаємо перше питання
     game_screen.style.display = 'flex'
     start_screen.style.display = "none"
     document.body.style.backgroundImage = "url(../img/bg3.png)"
-
+    setTimeout(endQuiz, totalTimer*60*1000)
 });
 
 
@@ -86,6 +98,7 @@ const timerElement = document.getElementById('seconds'); // Елемент дл�
 let questionsList = []; // Список питань
 let currentQuestionIndex = 0; // Індекс поточного питання
 let timerInterval; // Інтервал для таймера
+
 
 // Функція для отримання питань
 async function getQuestions() {
@@ -166,6 +179,8 @@ function displayQuestion() {
     startTimer();
 }
 
+
+
 // Обробник натискання на кнопку відповіді
 function handleAnswerClick(selectedAnswer, selected_button) {
     const correctAnswer = questionsList[currentQuestionIndex].correct; // Правильна відповідь
@@ -175,6 +190,7 @@ function handleAnswerClick(selectedAnswer, selected_button) {
 
     if (selectedAnswer === correctAnswer) {
         console.log("Вірно!");
+        points += 1
         selected_button.style.borderColor = "rgba(0,255,0)"
         
     } else {
@@ -199,8 +215,12 @@ function handleAnswerClick(selectedAnswer, selected_button) {
 
 // Функція для пропуску питання, коли користувач не відповів вчасно
 function skipQuestion() {
-    currentQuestionIndex = (currentQuestionIndex + 1) % questionsList.length; // Переходимо до наступного питання
-    displayQuestion(); // Відображаємо наступне питання
+    currentQuestionIndex = (currentQuestionIndex + 1); // Переходимо до наступного питання
+    if (currentQuestionIndex < questionsList.length){
+        displayQuestion(); // Відображаємо наступне питання
+    } else{
+        endQuiz();
+    }
 }
 
 // Завантажуємо питання при завантаженні сторінки
@@ -214,3 +234,12 @@ skip_btn.addEventListener('click', function(){
     clearInterval(timerInterval); // Зупиняємо таймер
     skipQuestion(); // Пропускаємо питання
 });
+
+function endQuiz(){
+    game_screen.style.display = 'none'
+    start_screen.style.display = "flex"
+    document.body.style.backgroundImage = "url(../img/bg1.png)"
+    let result = document.querySelector('.result')
+    result.innerHTML = "Результат: " + points +" очок"
+    
+}
